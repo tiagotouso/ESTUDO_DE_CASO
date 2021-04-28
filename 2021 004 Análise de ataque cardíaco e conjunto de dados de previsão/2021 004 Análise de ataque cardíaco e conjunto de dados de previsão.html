@@ -15193,7 +15193,7 @@ dtype: float64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0x2fab289ffa0&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x21632866880&gt;</pre>
 </div>
 
 </div>
@@ -15957,7 +15957,7 @@ dtype: float64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;seaborn.axisgrid.FacetGrid at 0x2fabb5a7160&gt;</pre>
+<pre>&lt;seaborn.axisgrid.FacetGrid at 0x2163b664e20&gt;</pre>
 </div>
 
 </div>
@@ -15985,7 +15985,7 @@ dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="TRATAMENTO-DOS-DADOS">TRATAMENTO DOS DADOS<a class="anchor-link" href="#TRATAMENTO-DOS-DADOS">&#182;</a></h1>
+<h1 id="PR&#201;-PROCESSAMENTO">PR&#201;-PROCESSAMENTO<a class="anchor-link" href="#PR&#201;-PROCESSAMENTO">&#182;</a></h1>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -16729,48 +16729,48 @@ Please also refer to the documentation for alternative solver options:
 <pre>REGRESSÃO LÓGICA --------------------
               precision    recall  f1-score   support
 
-           0       0.95      0.80      0.87        49
-           1       0.80      0.95      0.87        42
+           0       0.80      0.82      0.81        40
+           1       0.86      0.84      0.85        51
 
-    accuracy                           0.87        91
-   macro avg       0.88      0.87      0.87        91
-weighted avg       0.88      0.87      0.87        91
+    accuracy                           0.84        91
+   macro avg       0.83      0.83      0.83        91
+weighted avg       0.84      0.84      0.84        91
 
 --------------------------------------------------
 
 ÁRVORE DE DECISÃO --------------------
               precision    recall  f1-score   support
 
-           0       0.89      0.80      0.84        49
-           1       0.79      0.88      0.83        42
+           0       0.76      0.78      0.77        40
+           1       0.82      0.80      0.81        51
 
-    accuracy                           0.84        91
-   macro avg       0.84      0.84      0.84        91
-weighted avg       0.84      0.84      0.84        91
+    accuracy                           0.79        91
+   macro avg       0.79      0.79      0.79        91
+weighted avg       0.79      0.79      0.79        91
 
 --------------------------------------------------
 
 FLORESTA DE DECISÃO --------------------
               precision    recall  f1-score   support
 
-           0       0.95      0.78      0.85        49
-           1       0.78      0.95      0.86        42
+           0       0.76      0.88      0.81        40
+           1       0.89      0.78      0.83        51
 
-    accuracy                           0.86        91
-   macro avg       0.87      0.86      0.86        91
-weighted avg       0.87      0.86      0.86        91
+    accuracy                           0.82        91
+   macro avg       0.82      0.83      0.82        91
+weighted avg       0.83      0.82      0.82        91
 
 --------------------------------------------------
 
 MÁQUINA DE VETOR --------------------
               precision    recall  f1-score   support
 
-           0       0.86      0.24      0.38        49
-           1       0.52      0.95      0.67        42
+           0       0.66      0.57      0.61        40
+           1       0.70      0.76      0.73        51
 
-    accuracy                           0.57        91
-   macro avg       0.69      0.60      0.53        91
-weighted avg       0.70      0.57      0.52        91
+    accuracy                           0.68        91
+   macro avg       0.68      0.67      0.67        91
+weighted avg       0.68      0.68      0.68        91
 
 --------------------------------------------------
 
@@ -16815,23 +16815,23 @@ weighted avg       0.70      0.57      0.52        91
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>REGRESSÃO LÓGICA --------------------
-[[39 10]
- [ 2 40]]
+[[33  7]
+ [ 8 43]]
 --------------------------------------------------
 
 ÁRVORE DE DECISÃO --------------------
-[[39 10]
- [ 5 37]]
+[[31  9]
+ [10 41]]
 --------------------------------------------------
 
 FLORESTA DE DECISÃO --------------------
-[[38 11]
- [ 2 40]]
+[[35  5]
+ [11 40]]
 --------------------------------------------------
 
 MÁQUINA DE VETOR --------------------
-[[12 37]
- [ 2 40]]
+[[23 17]
+ [12 39]]
 --------------------------------------------------
 
 </pre>
@@ -16940,21 +16940,21 @@ MÁQUINA DE VETOR --------------------
   </thead>
   <tbody>
     <tr>
-      <th>145</th>
-      <td>70</td>
+      <th>285</th>
+      <td>46</td>
       <td>1</td>
+      <td>0</td>
+      <td>140</td>
+      <td>311</td>
+      <td>0</td>
       <td>1</td>
-      <td>156</td>
-      <td>245</td>
-      <td>0</td>
-      <td>0</td>
-      <td>143</td>
-      <td>0</td>
-      <td>0.0</td>
+      <td>120</td>
+      <td>1</td>
+      <td>1.8</td>
+      <td>1</td>
       <td>2</td>
+      <td>3</td>
       <td>0</td>
-      <td>2</td>
-      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -17001,7 +17001,7 @@ MÁQUINA DE VETOR --------------------
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([1], dtype=int64)</pre>
+<pre>array([0], dtype=int64)</pre>
 </div>
 
 </div>
@@ -17077,88 +17077,88 @@ MÁQUINA DE VETOR --------------------
   </thead>
   <tbody>
     <tr>
-      <th>16</th>
-      <td>58</td>
+      <th>4</th>
+      <td>57</td>
       <td>0</td>
-      <td>2</td>
+      <td>0</td>
       <td>120</td>
-      <td>340</td>
+      <td>354</td>
       <td>0</td>
       <td>1</td>
-      <td>172</td>
-      <td>0</td>
-      <td>0.0</td>
+      <td>163</td>
+      <td>1</td>
+      <td>0.6</td>
       <td>2</td>
       <td>0</td>
       <td>2</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>148</th>
-      <td>44</td>
-      <td>1</td>
-      <td>2</td>
-      <td>120</td>
-      <td>226</td>
+      <th>19</th>
+      <td>69</td>
       <td>0</td>
-      <td>1</td>
-      <td>169</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>162</th>
-      <td>41</td>
-      <td>1</td>
-      <td>1</td>
-      <td>120</td>
-      <td>157</td>
-      <td>0</td>
-      <td>1</td>
-      <td>182</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>195</th>
-      <td>59</td>
-      <td>1</td>
-      <td>0</td>
-      <td>170</td>
-      <td>326</td>
-      <td>0</td>
-      <td>0</td>
+      <td>3</td>
       <td>140</td>
+      <td>239</td>
+      <td>0</td>
       <td>1</td>
-      <td>3.4</td>
+      <td>151</td>
       <td>0</td>
-      <td>0</td>
-      <td>3</td>
-      <td>0</td>
+      <td>1.8</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
-      <th>267</th>
-      <td>49</td>
+      <th>134</th>
+      <td>41</td>
+      <td>0</td>
+      <td>1</td>
+      <td>126</td>
+      <td>306</td>
+      <td>0</td>
+      <td>1</td>
+      <td>163</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>157</th>
+      <td>35</td>
+      <td>1</td>
+      <td>1</td>
+      <td>122</td>
+      <td>192</td>
+      <td>0</td>
+      <td>1</td>
+      <td>174</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>229</th>
+      <td>64</td>
       <td>1</td>
       <td>2</td>
-      <td>118</td>
-      <td>149</td>
+      <td>125</td>
+      <td>309</td>
       <td>0</td>
+      <td>1</td>
+      <td>131</td>
+      <td>1</td>
+      <td>1.8</td>
+      <td>1</td>
       <td>0</td>
-      <td>126</td>
-      <td>0</td>
-      <td>0.8</td>
-      <td>2</td>
       <td>3</td>
-      <td>2</td>
       <td>0</td>
     </tr>
   </tbody>
@@ -17206,7 +17206,7 @@ MÁQUINA DE VETOR --------------------
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([1, 1, 1, 0, 0], dtype=int64)</pre>
+<pre>array([1, 1, 1, 1, 0], dtype=int64)</pre>
 </div>
 
 </div>
