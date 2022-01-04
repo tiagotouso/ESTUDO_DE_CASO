@@ -1,0 +1,1181 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={2021 Cálculo do IGC Ranking},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{2021 Cálculo do IGC Ranking}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\hypertarget{problema}{%
+\section{PROBLEMA}\label{problema}}
+
+Calcular a posição do ranking da Universidade Federal do Triângulo
+Mineiro (UFTM) no IGC (O Índice Geral de Cursos é um dos instrumentos
+utilizados para conhecer o desempenho das instituições de ensino
+superior do Brasil. O instrumento é construído com base numa média
+ponderada das notas dos cursos de graduação e pós-graduação de cada
+instituição.)
+
+\hypertarget{dataset}{%
+\section{DATASET}\label{dataset}}
+
+\url{https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais/indicadores-de-qualidade-da-educacao-superior}
+
+CARREGAR OS MÓDULOS
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(readxl)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(ggcorrplot)}
+\end{Highlighting}
+\end{Shaded}
+
+CARREGAR O DATASET
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados }\OtherTok{\textless{}{-}} \FunctionTok{read\_excel}\NormalTok{(}\StringTok{"IGC\_2019.xlsx"}\NormalTok{)}
+\NormalTok{dados }\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(dados)}
+\end{Highlighting}
+\end{Shaded}
+
+VERIFICAR O NOME DAS COLUNAS DO DATASET
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{colnames}\NormalTok{(dados)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "Ano"                                          
+##  [2] "Código da IES"                                
+##  [3] "Nome da IES"                                  
+##  [4] "Sigla da IES"                                 
+##  [5] "Organização Acadêmica"                        
+##  [6] "Categoria Administrativa"                     
+##  [7] "Sigla da UF"                                  
+##  [8] "Nº de Cursos com CPC no triênio"              
+##  [9] "Alfa (Proporção de Graduação)"                
+## [10] "Conceito Médio de Graduação"                  
+## [11] "Beta (Proporção de Mestrado - Equivalente)"   
+## [12] "Conceito Médio de Mestrado"                   
+## [13] "Gama (Proporção de Doutorandos – Equivalente)"
+## [14] "Conceito Médio do doutorado"                  
+## [15] "IGC (Contínuo)"                               
+## [16] "IGC (Faixa)"                                  
+## [17] "TX_OBS"
+\end{verbatim}
+
+VERIFICAR O NOME DAS LINHAS
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{rownames}\NormalTok{(dados)[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{20}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "1"  "2"  "3"  "4"  "5"  "6"  "7"  "8"  "9"  "10" "11" "12" "13" "14" "15"
+## [16] "16" "17" "18" "19" "20"
+\end{verbatim}
+
+VERIFICAR O TAMANHA DO DATASET
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dim}\NormalTok{(dados)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2090   17
+\end{verbatim}
+
+VERIFICAR OS TIPOS DE DADOS DO DATASET
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(dados)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    2090 obs. of  17 variables:
+##  $ Ano                                          : num  2019 2019 2019 2019 2019 ...
+##  $ Código da IES                                : num  1 2 3 4 5 6 7 8 9 10 ...
+##  $ Nome da IES                                  : chr  "UNIVERSIDADE FEDERAL DE MATO GROSSO" "UNIVERSIDADE DE BRASÍLIA" "UNIVERSIDADE FEDERAL DE SERGIPE" "UNIVERSIDADE FEDERAL DO AMAZONAS" ...
+##  $ Sigla da IES                                 : chr  "UFMT" "UNB" "UFS" "UFAM" ...
+##  $ Organização Acadêmica                        : chr  "Universidade" "Universidade" "Universidade" "Universidade" ...
+##  $ Categoria Administrativa                     : chr  "Pública Federal" "Pública Federal" "Pública Federal" "Pública Federal" ...
+##  $ Sigla da UF                                  : chr  "MT" "DF" "SE" "AM" ...
+##  $ Nº de Cursos com CPC no triênio              : num  91 87 90 75 77 44 58 63 47 70 ...
+##  $ Alfa (Proporção de Graduação)                : chr  "0.79335476959999995" "0.52436395869999997" "0.80141717700000004" "0.84858188469999996" ...
+##  $ Conceito Médio de Graduação                  : chr  "2.9249620906999998" "3.2695857893000002" "3.1054996969999999" "2.8218514477999999" ...
+##  $ Beta (Proporção de Mestrado - Equivalente)   : chr  "0.13380493030000001" "0.23254033800000001" "0.1218487395" "0.1029658432" ...
+##  $ Conceito Médio de Mestrado                   : chr  "4.2998462327000002" "4.5884405054000004" "4.2752605347000001" "4.2343665035000004" ...
+##  $ Gama (Proporção de Doutorandos – Equivalente): chr  "7.2840300100000005E-2" "0.24309570329999999" "7.6734083499999994E-2" "4.8452271999999998E-2" ...
+##  $ Conceito Médio do doutorado                  : chr  "4.6765927977999997" "4.7726399230999998" "4.6636069113999996" "4.4914196567999998" ...
+##  $ IGC (Contínuo)                               : num  3.24 3.94 3.37 3.05 2.96 ...
+##  $ IGC (Faixa)                                  : chr  "4" "4" "4" "4" ...
+##  $ TX_OBS                                       : logi  NA NA NA NA NA NA ...
+\end{verbatim}
+
+VERIFICAR OS TIPOS DE DADOS DO DATASET
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{glimpse}\NormalTok{(dados)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 2,090
+## Columns: 17
+## $ Ano                                             <dbl> 2019, 2019, 2019, 2019~
+## $ `Código da IES`                                 <dbl> 1, 2, 3, 4, 5, 6, 7, 8~
+## $ `Nome da IES`                                   <chr> "UNIVERSIDADE FEDERAL ~
+## $ `Sigla da IES`                                  <chr> "UFMT", "UNB", "UFS", ~
+## $ `Organização Acadêmica`                         <chr> "Universidade", "Unive~
+## $ `Categoria Administrativa`                      <chr> "Pública Federal", "Pú~
+## $ `Sigla da UF`                                   <chr> "MT", "DF", "SE", "AM"~
+## $ `Nº de Cursos com CPC no triênio`               <dbl> 91, 87, 90, 75, 77, 44~
+## $ `Alfa (Proporção de Graduação)`                 <chr> "0.79335476959999995",~
+## $ `Conceito Médio de Graduação`                   <chr> "2.9249620906999998", ~
+## $ `Beta (Proporção de Mestrado - Equivalente)`    <chr> "0.13380493030000001",~
+## $ `Conceito Médio de Mestrado`                    <chr> "4.2998462327000002", ~
+## $ `Gama (Proporção de Doutorandos – Equivalente)` <chr> "7.2840300100000005E-2~
+## $ `Conceito Médio do doutorado`                   <chr> "4.6765927977999997", ~
+## $ `IGC (Contínuo)`                                <dbl> 3.236518, 3.941659, 3.~
+## $ `IGC (Faixa)`                                   <chr> "4", "4", "4", "4", "4~
+## $ TX_OBS                                          <lgl> NA, NA, NA, NA, NA, NA~
+\end{verbatim}
+
+VERIFICAR A QUANTIDADE DE VALORES ÚNICOS
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sapply}\NormalTok{(dados, }\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{length}\NormalTok{(}\FunctionTok{unique}\NormalTok{(x)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                           Ano 
+##                                             1 
+##                                 Código da IES 
+##                                          2090 
+##                                   Nome da IES 
+##                                          2070 
+##                                  Sigla da IES 
+##                                          1549 
+##                         Organização Acadêmica 
+##                                             5 
+##                      Categoria Administrativa 
+##                                             6 
+##                                   Sigla da UF 
+##                                            27 
+##               Nº de Cursos com CPC no triênio 
+##                                           103 
+##                 Alfa (Proporção de Graduação) 
+##                                           337 
+##                   Conceito Médio de Graduação 
+##                                          2071 
+##    Beta (Proporção de Mestrado - Equivalente) 
+##                                           335 
+##                    Conceito Médio de Mestrado 
+##                                           222 
+## Gama (Proporção de Doutorandos – Equivalente) 
+##                                           211 
+##                   Conceito Médio do doutorado 
+##                                           123 
+##                                IGC (Contínuo) 
+##                                          2071 
+##                                   IGC (Faixa) 
+##                                             6 
+##                                        TX_OBS 
+##                                             1
+\end{verbatim}
+
+VERIFICAR O RESUMO DO DATASET
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(dados)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       Ano       Código da IES   Nome da IES        Sigla da IES      
+##  Min.   :2019   Min.   :    1   Length:2090        Length:2090       
+##  1st Qu.:2019   1st Qu.: 1144   Class :character   Class :character  
+##  Median :2019   Median : 2044   Mode  :character   Mode  :character  
+##  Mean   :2019   Mean   : 3994                                        
+##  3rd Qu.:2019   3rd Qu.: 4106                                        
+##  Max.   :2019   Max.   :23410                                        
+##                                                                      
+##  Organização Acadêmica Categoria Administrativa Sigla da UF       
+##  Length:2090           Length:2090              Length:2090       
+##  Class :character      Class :character         Class :character  
+##  Mode  :character      Mode  :character         Mode  :character  
+##                                                                   
+##                                                                   
+##                                                                   
+##                                                                   
+##  Nº de Cursos com CPC no triênio Alfa (Proporção de Graduação)
+##  Min.   :  0.00                  Length:2090                  
+##  1st Qu.:  2.00                  Class :character             
+##  Median :  5.00                  Mode  :character             
+##  Mean   : 11.55                                               
+##  3rd Qu.: 11.00                                               
+##  Max.   :713.00                                               
+##                                                               
+##  Conceito Médio de Graduação Beta (Proporção de Mestrado - Equivalente)
+##  Length:2090                 Length:2090                               
+##  Class :character            Class :character                          
+##  Mode  :character            Mode  :character                          
+##                                                                        
+##                                                                        
+##                                                                        
+##                                                                        
+##  Conceito Médio de Mestrado Gama (Proporção de Doutorandos – Equivalente)
+##  Length:2090                Length:2090                                  
+##  Class :character           Class :character                             
+##  Mode  :character           Mode  :character                             
+##                                                                          
+##                                                                          
+##                                                                          
+##                                                                          
+##  Conceito Médio do doutorado IGC (Contínuo)   IGC (Faixa)         TX_OBS       
+##  Length:2090                 Min.   :0.7498   Length:2090        Mode:logical  
+##  Class :character            1st Qu.:2.2099   Class :character   NA's:2090     
+##  Mode  :character            Median :2.5493   Mode  :character                 
+##                              Mean   :2.5765                                    
+##                              3rd Qu.:2.9228                                    
+##                              Max.   :4.8549                                    
+##                              NA's   :20
+\end{verbatim}
+
+VERIFICAR A QUANTIDADE DE VALORES MISSING
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sapply}\NormalTok{(dados, }\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{sum}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(x)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                           Ano 
+##                                             0 
+##                                 Código da IES 
+##                                             0 
+##                                   Nome da IES 
+##                                             0 
+##                                  Sigla da IES 
+##                                           316 
+##                         Organização Acadêmica 
+##                                             0 
+##                      Categoria Administrativa 
+##                                             0 
+##                                   Sigla da UF 
+##                                             0 
+##               Nº de Cursos com CPC no triênio 
+##                                             0 
+##                 Alfa (Proporção de Graduação) 
+##                                             0 
+##                   Conceito Médio de Graduação 
+##                                             0 
+##    Beta (Proporção de Mestrado - Equivalente) 
+##                                             0 
+##                    Conceito Médio de Mestrado 
+##                                             0 
+## Gama (Proporção de Doutorandos – Equivalente) 
+##                                             0 
+##                   Conceito Médio do doutorado 
+##                                             0 
+##                                IGC (Contínuo) 
+##                                            20 
+##                                   IGC (Faixa) 
+##                                             0 
+##                                        TX_OBS 
+##                                          2090
+\end{verbatim}
+
+VERIFICAR A QUANTIDADE DE VALORES NULOS
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sapply}\NormalTok{(dados, }\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{sum}\NormalTok{(}\FunctionTok{is.null}\NormalTok{(x)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                           Ano 
+##                                             0 
+##                                 Código da IES 
+##                                             0 
+##                                   Nome da IES 
+##                                             0 
+##                                  Sigla da IES 
+##                                             0 
+##                         Organização Acadêmica 
+##                                             0 
+##                      Categoria Administrativa 
+##                                             0 
+##                                   Sigla da UF 
+##                                             0 
+##               Nº de Cursos com CPC no triênio 
+##                                             0 
+##                 Alfa (Proporção de Graduação) 
+##                                             0 
+##                   Conceito Médio de Graduação 
+##                                             0 
+##    Beta (Proporção de Mestrado - Equivalente) 
+##                                             0 
+##                    Conceito Médio de Mestrado 
+##                                             0 
+## Gama (Proporção de Doutorandos – Equivalente) 
+##                                             0 
+##                   Conceito Médio do doutorado 
+##                                             0 
+##                                IGC (Contínuo) 
+##                                             0 
+##                                   IGC (Faixa) 
+##                                             0 
+##                                        TX_OBS 
+##                                             0
+\end{verbatim}
+
+VERIFICAR AS PRIMEIRAS LINHAS DO DATASET
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(dados, }\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Ano Código da IES                         Nome da IES Sigla da IES
+## 1 2019             1 UNIVERSIDADE FEDERAL DE MATO GROSSO         UFMT
+## 2 2019             2            UNIVERSIDADE DE BRASÍLIA          UNB
+## 3 2019             3     UNIVERSIDADE FEDERAL DE SERGIPE          UFS
+## 4 2019             4    UNIVERSIDADE FEDERAL DO AMAZONAS         UFAM
+## 5 2019             5       UNIVERSIDADE FEDERAL DO PIAUÍ         UFPI
+##   Organização Acadêmica Categoria Administrativa Sigla da UF
+## 1          Universidade          Pública Federal          MT
+## 2          Universidade          Pública Federal          DF
+## 3          Universidade          Pública Federal          SE
+## 4          Universidade          Pública Federal          AM
+## 5          Universidade          Pública Federal          PI
+##   Nº de Cursos com CPC no triênio Alfa (Proporção de Graduação)
+## 1                              91           0.79335476959999995
+## 2                              87           0.52436395869999997
+## 3                              90           0.80141717700000004
+## 4                              75           0.84858188469999996
+## 5                              77           0.85508329439999997
+##   Conceito Médio de Graduação Beta (Proporção de Mestrado - Equivalente)
+## 1          2.9249620906999998                        0.13380493030000001
+## 2          3.2695857893000002                        0.23254033800000001
+## 3          3.1054996969999999                               0.1218487395
+## 4          2.8218514477999999                               0.1029658432
+## 5                2.7132830196                               0.1002335357
+##   Conceito Médio de Mestrado Gama (Proporção de Doutorandos – Equivalente)
+## 1         4.2998462327000002                         7.2840300100000005E-2
+## 2         4.5884405054000004                           0.24309570329999999
+## 3         4.2752605347000001                         7.6734083499999994E-2
+## 4         4.2343665035000004                         4.8452271999999998E-2
+## 5         4.3096076458999999                                 4.46831699E-2
+##   Conceito Médio do doutorado IGC (Contínuo) IGC (Faixa) TX_OBS
+## 1          4.6765927977999997       3.236518           4     NA
+## 2          4.7726399230999998       3.941659           4     NA
+## 3          4.6636069113999996       3.367594           4     NA
+## 4          4.4914196567999998       3.048187           4     NA
+## 5          4.6685667752000004       2.960657           4     NA
+\end{verbatim}
+
+VERIFICAR AS ÚLTIMAS LINHAS DO DATASET
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{tail}\NormalTok{(dados)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       Ano Código da IES                                           Nome da IES
+## 2085 2019         19861                      Faculdade de Santana de Parnaíba
+## 2086 2019         19862            Faculdade de Tecnologia Jorge Caram Sabbag
+## 2087 2019         19863                      Faculdade de Tecnologia de Assis
+## 2088 2019         20478        Faculdade de Tecnologia de Santana de Parnaíba
+## 2089 2019         22015       Faculdade Municipal de Educação e Meio Ambiente
+## 2090 2019         23410 UNIVERSIDADE ESTADUAL DA REGIÃO TOCANTINA DO MARANHÃO
+##         Sigla da IES Organização Acadêmica    Categoria Administrativa
+## 2085            FASP             Faculdade Privada sem fins lucrativos
+## 2086 FATEC Bebedouro             Faculdade            Pública Estadual
+## 2087     FATEC Assis             Faculdade            Pública Estadual
+## 2088       FATEC-SPB             Faculdade            Pública Estadual
+## 2089            FAMA             Faculdade           Pública Municipal
+## 2090         UEMASUL          Universidade            Pública Estadual
+##      Sigla da UF Nº de Cursos com CPC no triênio Alfa (Proporção de Graduação)
+## 2085          SP                               1                             1
+## 2086          SP                               1                             1
+## 2087          SP                               1                             1
+## 2088          SP                               1                             1
+## 2089          PR                               1                             1
+## 2090          MA                               4                             1
+##      Conceito Médio de Graduação Beta (Proporção de Mestrado - Equivalente)
+## 2085          1.8177437750000001                                          0
+## 2086                  2.83566027                                          0
+## 2087                 2.525471349                                          0
+## 2088          2.5126855469999998                                          0
+## 2089          2.2929000639999999                                          0
+## 2090          1.5446138546999999                                          0
+##      Conceito Médio de Mestrado Gama (Proporção de Doutorandos – Equivalente)
+## 2085                          0                                             0
+## 2086                          0                                             0
+## 2087                          0                                             0
+## 2088                          0                                             0
+## 2089                          0                                             0
+## 2090                          0                                             0
+##      Conceito Médio do doutorado IGC (Contínuo) IGC (Faixa) TX_OBS
+## 2085                           0       1.817744           2     NA
+## 2086                           0       2.835660           3     NA
+## 2087                           0       2.525471           3     NA
+## 2088                           0       2.512686           3     NA
+## 2089                           0       2.292900           3     NA
+## 2090                           0       1.544614           2     NA
+\end{verbatim}
+
+VERIFIAR VALORES ALEATÓRIOS DO DATASET
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sample\_n}\NormalTok{(dados, }\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Ano Código da IES
+## 1 2019           967
+## 2 2019          1699
+## 3 2019          5036
+## 4 2019          1884
+## 5 2019         15745
+##                                                       Nome da IES
+## 1                         FACULDADE DE TECNOLOGIA DE TAQUARITINGA
+## 2                                   FACULDADE DE EDUCAÇÃO DE JARU
+## 3 INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA CATARINENSE
+## 4                                          FACULDADE DE RANCHARIA
+## 5                   Faculdade de Tecnologia de São Caetano do Sul
+##     Sigla da IES                               Organização Acadêmica
+## 1       FATEC/TQ                                           Faculdade
+## 2      UNICENTRO                                           Faculdade
+## 3 IF Catarinense Instituto Federal de Educação, Ciência e Tecnologia
+## 4           <NA>                                           Faculdade
+## 5      FATEC SCS                                           Faculdade
+##      Categoria Administrativa Sigla da UF Nº de Cursos com CPC no triênio
+## 1            Pública Estadual          SP                               2
+## 2 Privada sem fins lucrativos          RO                               4
+## 3             Pública Federal          SC                              26
+## 4 Privada com fins lucrativos          SP                               3
+## 5            Pública Estadual          SP                               1
+##   Alfa (Proporção de Graduação) Conceito Médio de Graduação
+## 1                             1                2.4242011392
+## 2                             1                2.8555516529
+## 3           0.96436984690000005          3.0942799494000002
+## 4                             1          1.8446187334999999
+## 5                             1                 2.538113295
+##   Beta (Proporção de Mestrado - Equivalente) Conceito Médio de Mestrado
+## 1                                          0                          0
+## 2                                          0                          0
+## 3                      3.5630153099999999E-2                          4
+## 4                                          0                          0
+## 5                                          0                          0
+##   Gama (Proporção de Doutorandos – Equivalente) Conceito Médio do doutorado
+## 1                                             0                           0
+## 2                                             0                           0
+## 3                                             0                           0
+## 4                                             0                           0
+## 5                                             0                           0
+##   IGC (Contínuo) IGC (Faixa) TX_OBS
+## 1       2.424201           3     NA
+## 2       2.855552           3     NA
+## 3       3.126551           4     NA
+## 4       1.844619           2     NA
+## 5       2.538113           3     NA
+\end{verbatim}
+
+VERIFICAR A QUANTIDADE DE VALORES MISSING DA VARIÁVEL
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dim}\NormalTok{(dados[}\FunctionTok{is.na}\NormalTok{(dados}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{), ])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 20 17
+\end{verbatim}
+
+VERIFICAR OS REGISTROS QUE TEM VALORES MISSING
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados[}\FunctionTok{is.na}\NormalTok{(dados}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{), ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       Ano Código da IES                                            Nome da IES
+## 322  2019           651     FACULDADE DE ADMINISTRAÇÃO DE GOVERNADOR VALADARES
+## 353  2019           708                INSTITUTO DE CIÊNCIAS SOCIAIS APLICADAS
+## 466  2019          1034                  UNIÃO DE ESCOLAS SUPERIORES DA FUNESO
+## 489  2019          1072                                   FACULDADE AFIRMATIVO
+## 717  2019          1501                 FACULDADE LATINO AMERICANA DE EDUCAÇÃO
+## 797  2019          1628                 FACULDADE DE CIÊNCIAS HUMANAS DE AGUAÍ
+## 950  2019          1865                            Faculdade Alvorada Paulista
+## 1052 2019          2075                INSTITUTO DE ENSINO SUPERIOR DE ALAGOAS
+## 1215 2019          2566                 INSTITUTO DE ENSINO SUPERIOR DE OLINDA
+## 1305 2019          2927                            FACULDADE DE BELO HORIZONTE
+## 1367 2019          3307                                 FACULDADE DE RIO CLARO
+## 1562 2019          4095 FACULDADE DE TECNOLOGIA E CIÊNCIAS DO DISTRITO FEDERAL
+## 1645 2019          4605                         FACULDADE DE CORNÉLIO PROCÓPIO
+## 1668 2019          4739                 FACULDADE PRESBITERIANA AUGUSTO GALVÃO
+## 1797 2019         11007                                 FACULDADE CENTRO OESTE
+## 1883 2019         13865                     FACULDADE SISTEMA DE ENSINO GAÚCHO
+## 2003 2019         15980                                    FG Faculdade Global
+## 2005 2019         16245                FACULDADE ESCOLA DE NEGÓCIOS EXCELLENCE
+## 2063 2019         18210                             FACULDADE UNINASSAU OLINDA
+## 2067 2019         18454                           Faculdade Una de Sete Lagoas
+##      Sigla da IES Organização Acadêmica    Categoria Administrativa Sigla da UF
+## 322          FAGV             Faculdade Privada sem fins lucrativos          MG
+## 353          UNEB             Faculdade Privada sem fins lucrativos          DF
+## 466         UNESF             Faculdade Privada sem fins lucrativos          PE
+## 489          FAFI             Faculdade Privada com fins lucrativos          MT
+## 717        FLATED             Faculdade Privada sem fins lucrativos          CE
+## 797         FACHA             Faculdade Privada com fins lucrativos          SP
+## 950          FALP             Faculdade Privada com fins lucrativos          SP
+## 1052         IESA             Faculdade Privada com fins lucrativos          AL
+## 1215         IESO             Faculdade Privada com fins lucrativos          PE
+## 1305          FDR             Faculdade Privada com fins lucrativos          MG
+## 1367         CBTA             Faculdade Privada com fins lucrativos          SP
+## 1562      FATECDF             Faculdade Privada com fins lucrativos          DF
+## 1645         <NA>             Faculdade Privada com fins lucrativos          PR
+## 1668        FAPAG             Faculdade Privada sem fins lucrativos          BA
+## 1797     FACEOPAR             Faculdade Privada com fins lucrativos          PR
+## 1883        FASEG             Faculdade Privada com fins lucrativos          RS
+## 2003           FG             Faculdade Privada com fins lucrativos          RS
+## 2005        FAENE             Faculdade Privada com fins lucrativos          MA
+## 2063         <NA>             Faculdade Privada com fins lucrativos          PE
+## 2067       Unaset             Faculdade Privada com fins lucrativos          MG
+##      Nº de Cursos com CPC no triênio Alfa (Proporção de Graduação)
+## 322                                1                             0
+## 353                                2                             0
+## 466                                5                             0
+## 489                                1                             0
+## 717                                1                             0
+## 797                                1                             0
+## 950                                0                             0
+## 1052                               0                             0
+## 1215                               0                             0
+## 1305                               0                             0
+## 1367                               0                             0
+## 1562                               0                             0
+## 1645                               1                             0
+## 1668                               0                             0
+## 1797                               2                             0
+## 1883                               0                             0
+## 2003                               0                             0
+## 2005                               0                             0
+## 2063                               2                             0
+## 2067                               0                             0
+##      Conceito Médio de Graduação Beta (Proporção de Mestrado - Equivalente)
+## 322                            0                                          0
+## 353                            0                                          0
+## 466                            0                                          0
+## 489                            0                                          0
+## 717                            0                                          0
+## 797                            0                                          0
+## 950                            0                                          0
+## 1052                           0                                          0
+## 1215                           0                                          0
+## 1305                           0                                          0
+## 1367                           0                                          0
+## 1562                           0                                          0
+## 1645                           0                                          0
+## 1668                           0                                          0
+## 1797                           0                                          0
+## 1883                           0                                          0
+## 2003                           0                                          0
+## 2005                           0                                          0
+## 2063                           0                                          0
+## 2067                           0                                          0
+##      Conceito Médio de Mestrado Gama (Proporção de Doutorandos – Equivalente)
+## 322                           0                                             0
+## 353                           0                                             0
+## 466                           0                                             0
+## 489                           0                                             0
+## 717                           0                                             0
+## 797                           0                                             0
+## 950                           0                                             0
+## 1052                          0                                             0
+## 1215                          0                                             0
+## 1305                          0                                             0
+## 1367                          0                                             0
+## 1562                          0                                             0
+## 1645                          0                                             0
+## 1668                          0                                             0
+## 1797                          0                                             0
+## 1883                          0                                             0
+## 2003                          0                                             0
+## 2005                          0                                             0
+## 2063                          0                                             0
+## 2067                          0                                             0
+##      Conceito Médio do doutorado IGC (Contínuo) IGC (Faixa) TX_OBS
+## 322                            0             NA          SC     NA
+## 353                            0             NA          SC     NA
+## 466                            0             NA          SC     NA
+## 489                            0             NA          SC     NA
+## 717                            0             NA          SC     NA
+## 797                            0             NA          SC     NA
+## 950                            0             NA          SC     NA
+## 1052                           0             NA          SC     NA
+## 1215                           0             NA          SC     NA
+## 1305                           0             NA          SC     NA
+## 1367                           0             NA          SC     NA
+## 1562                           0             NA          SC     NA
+## 1645                           0             NA          SC     NA
+## 1668                           0             NA          SC     NA
+## 1797                           0             NA          SC     NA
+## 1883                           0             NA          SC     NA
+## 2003                           0             NA          SC     NA
+## 2005                           0             NA          SC     NA
+## 2063                           0             NA          SC     NA
+## 2067                           0             NA          SC     NA
+\end{verbatim}
+
+EXCLUIR OS REGISTROS COM VALORES MISSING
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dados }\OtherTok{\textless{}{-}}\NormalTok{ dados[}\SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(dados}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{), ]}
+\end{Highlighting}
+\end{Shaded}
+
+PLOTAR HISTROGRAMA
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(dados) }\SpecialCharTok{+} 
+  \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_histogram}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+\end{verbatim}
+
+\includegraphics{2021_CALCULO_DO_IGC_RANKING_R_files/figure-latex/unnamed-chunk-18-1.pdf}
+
+PLOTAR BOXPLOT
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(dados) }\SpecialCharTok{+} 
+  \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_boxplot}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{2021_CALCULO_DO_IGC_RANKING_R_files/figure-latex/unnamed-chunk-19-1.pdf}
+
+VERIFICAR A MÉDIA POR UF
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filtro }\OtherTok{\textless{}{-}}\NormalTok{ dados }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{Sigla da UF}\StringTok{\textasciigrave{}}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}  
+  \FunctionTok{summarise}\NormalTok{( }\AttributeTok{media =} \FunctionTok{mean}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{arrange}\NormalTok{(media)}
+\NormalTok{levels }\OtherTok{\textless{}{-}}\NormalTok{ filtro}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Sigla da UF}\StringTok{\textasciigrave{}}
+\NormalTok{filtro}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Sigla da UF}\StringTok{\textasciigrave{}} \OtherTok{\textless{}{-}} \FunctionTok{factor}\NormalTok{(filtro}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Sigla da UF}\StringTok{\textasciigrave{}}\NormalTok{, }\AttributeTok{levels=}\NormalTok{levels, }\AttributeTok{ordered=}\ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{filtro}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 27 x 2
+##    `Sigla da UF` media
+##    <ord>         <dbl>
+##  1 AL             2.21
+##  2 AP             2.22
+##  3 TO             2.32
+##  4 PI             2.39
+##  5 MS             2.39
+##  6 MT             2.40
+##  7 PE             2.41
+##  8 PA             2.47
+##  9 MA             2.49
+## 10 AM             2.49
+## # ... with 17 more rows
+\end{verbatim}
+
+PLOTAR A MÉDIA POR UF
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filtro }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{\textasciigrave{}}\AttributeTok{Sigla da UF}\StringTok{\textasciigrave{}}\NormalTok{, }\AttributeTok{y =}\NormalTok{ media)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{2021_CALCULO_DO_IGC_RANKING_R_files/figure-latex/unnamed-chunk-21-1.pdf}
+
+PLOTAR O BOXPLOT POR UF
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(dados, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{, }\AttributeTok{y =} \StringTok{\textasciigrave{}}\AttributeTok{Sigla da UF}\StringTok{\textasciigrave{}}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{2021_CALCULO_DO_IGC_RANKING_R_files/figure-latex/unnamed-chunk-22-1.pdf}
+
+VERIFICAR A MÉDIA POR CATEGORIA ADM
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filtro }\OtherTok{\textless{}{-}}\NormalTok{ dados }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{Categoria Administrativa}\StringTok{\textasciigrave{}}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}  
+  \FunctionTok{summarise}\NormalTok{( }\AttributeTok{media =} \FunctionTok{mean}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{arrange}\NormalTok{(media)}
+\NormalTok{levels }\OtherTok{\textless{}{-}}\NormalTok{ filtro}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Categoria Administrativa}\StringTok{\textasciigrave{}}
+\NormalTok{filtro}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Categoria Administrativa}\StringTok{\textasciigrave{}} \OtherTok{\textless{}{-}} \FunctionTok{factor}\NormalTok{(filtro}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Categoria Administrativa}\StringTok{\textasciigrave{}}\NormalTok{, }
+                                            \AttributeTok{levels=}\NormalTok{levels, }\AttributeTok{ordered=}\ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{filtro}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 2
+##   `Categoria Administrativa`  media
+##   <ord>                       <dbl>
+## 1 Especial                     2.21
+## 2 Pública Municipal            2.33
+## 3 Privada com fins lucrativos  2.48
+## 4 Privada sem fins lucrativos  2.60
+## 5 Pública Estadual             2.79
+## 6 Pública Federal              3.28
+\end{verbatim}
+
+PLOTAR A MÉDIA POR CATEGORIA ADM
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filtro }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{\textasciigrave{}}\AttributeTok{Categoria Administrativa}\StringTok{\textasciigrave{}}\NormalTok{, }\AttributeTok{y =}\NormalTok{ media)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{2021_CALCULO_DO_IGC_RANKING_R_files/figure-latex/unnamed-chunk-24-1.pdf}
+
+PLOTAR O BOXPLOT POR CATEGORIA ADM
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(dados, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{, }\AttributeTok{y =} \StringTok{\textasciigrave{}}\AttributeTok{Categoria Administrativa}\StringTok{\textasciigrave{}}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{2021_CALCULO_DO_IGC_RANKING_R_files/figure-latex/unnamed-chunk-25-1.pdf}
+
+VERIFICAR A MÉDIA POR ORGANIZAÇÃO ACADÊMICA
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filtro }\OtherTok{\textless{}{-}}\NormalTok{ dados }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{Organização Acadêmica}\StringTok{\textasciigrave{}}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}  
+  \FunctionTok{summarise}\NormalTok{( }\AttributeTok{media =} \FunctionTok{mean}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{arrange}\NormalTok{(media)}
+\NormalTok{levels }\OtherTok{\textless{}{-}}\NormalTok{ filtro}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Organização Acadêmica}\StringTok{\textasciigrave{}}
+\NormalTok{filtro}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Organização Acadêmica}\StringTok{\textasciigrave{}} \OtherTok{\textless{}{-}} \FunctionTok{factor}\NormalTok{(filtro}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Organização Acadêmica}\StringTok{\textasciigrave{}}\NormalTok{, }
+                                            \AttributeTok{levels=}\NormalTok{levels, }\AttributeTok{ordered=}\ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{filtro}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 5 x 2
+##   `Organização Acadêmica`                             media
+##   <ord>                                               <dbl>
+## 1 Faculdade                                            2.45
+## 2 Centro Universitário                                 2.82
+## 3 Instituto Federal de Educação, Ciência e Tecnologia  2.83
+## 4 Universidade                                         3.11
+## 5 Centro Federal de Educação Tecnológica               3.51
+\end{verbatim}
+
+PLOTAR A MÉDIA POR ORGANIZAÇÃO ACADÊMICA
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filtro }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{\textasciigrave{}}\AttributeTok{Organização Acadêmica}\StringTok{\textasciigrave{}}\NormalTok{, }\AttributeTok{y =}\NormalTok{ media)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{2021_CALCULO_DO_IGC_RANKING_R_files/figure-latex/unnamed-chunk-27-1.pdf}
+
+PLOTAR O BOXPLOT POR ORGANIZAÇÃO ACADÊMICA
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(dados, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{, }\AttributeTok{y =} \StringTok{\textasciigrave{}}\AttributeTok{Organização Acadêmica}\StringTok{\textasciigrave{}}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{2021_CALCULO_DO_IGC_RANKING_R_files/figure-latex/unnamed-chunk-28-1.pdf}
+
+PLOTAR A QUANTIDADE DE ORGANIZAÇÃO ACADÊMICA
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(dados, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{\textasciigrave{}}\AttributeTok{Organização Acadêmica}\StringTok{\textasciigrave{}}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{2021_CALCULO_DO_IGC_RANKING_R_files/figure-latex/unnamed-chunk-29-1.pdf}
+
+CONVERTER AS VARIÁVEIS DE TEXTO PARA NUMÉRICO
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{colunas }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Nº de Cursos com CPC no triênio"}\NormalTok{,            }
+\StringTok{"Alfa (Proporção de Graduação)"}\NormalTok{,                }
+\StringTok{"Conceito Médio de Graduação"}\NormalTok{,                  }
+\StringTok{"Beta (Proporção de Mestrado {-} Equivalente)"}\NormalTok{,   }
+\StringTok{"Conceito Médio de Mestrado"}\NormalTok{,                   }
+\StringTok{"Gama (Proporção de Doutorandos – Equivalente)"}\NormalTok{,}
+\StringTok{"Conceito Médio do doutorado"}\NormalTok{,                  }
+\StringTok{"IGC (Contínuo)"}\NormalTok{,                               }
+\StringTok{"IGC (Faixa)"}\NormalTok{ )}
+\ControlFlowTok{for}\NormalTok{ (cl }\ControlFlowTok{in}\NormalTok{ colunas)\{}
+\NormalTok{  dados[cl] }\OtherTok{\textless{}{-}} \FunctionTok{as.double}\NormalTok{(dados[, cl])}
+\NormalTok{\}}
+\FunctionTok{cor}\NormalTok{(dados[, colunas])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                               Nº de Cursos com CPC no triênio
+## Nº de Cursos com CPC no triênio                                     1.0000000
+## Alfa (Proporção de Graduação)                                      -0.2681261
+## Conceito Médio de Graduação                                         0.1902578
+## Beta (Proporção de Mestrado - Equivalente)                          0.2203062
+## Conceito Médio de Mestrado                                          0.5139914
+## Gama (Proporção de Doutorandos – Equivalente)                       0.2966543
+## Conceito Médio do doutorado                                         0.5488676
+## IGC (Contínuo)                                                      0.2431461
+## IGC (Faixa)                                                         0.2066042
+##                                               Alfa (Proporção de Graduação)
+## Nº de Cursos com CPC no triênio                                  -0.2681261
+## Alfa (Proporção de Graduação)                                     1.0000000
+## Conceito Médio de Graduação                                      -0.3197487
+## Beta (Proporção de Mestrado - Equivalente)                       -0.9579571
+## Conceito Médio de Mestrado                                       -0.6291543
+## Gama (Proporção de Doutorandos – Equivalente)                    -0.8872498
+## Conceito Médio do doutorado                                      -0.6571712
+## IGC (Contínuo)                                                   -0.4999578
+## IGC (Faixa)                                                      -0.4550394
+##                                               Conceito Médio de Graduação
+## Nº de Cursos com CPC no triênio                                 0.1902578
+## Alfa (Proporção de Graduação)                                  -0.3197487
+## Conceito Médio de Graduação                                     1.0000000
+## Beta (Proporção de Mestrado - Equivalente)                      0.3217862
+## Conceito Médio de Mestrado                                      0.3264436
+## Gama (Proporção de Doutorandos – Equivalente)                   0.2588074
+## Conceito Médio do doutorado                                     0.2710030
+## IGC (Contínuo)                                                  0.9768458
+## IGC (Faixa)                                                     0.8772144
+##                                               Beta (Proporção de Mestrado - Equivalente)
+## Nº de Cursos com CPC no triênio                                                0.2203062
+## Alfa (Proporção de Graduação)                                                 -0.9579571
+## Conceito Médio de Graduação                                                    0.3217862
+## Beta (Proporção de Mestrado - Equivalente)                                     1.0000000
+## Conceito Médio de Mestrado                                                     0.6325637
+## Gama (Proporção de Doutorandos – Equivalente)                                  0.7175979
+## Conceito Médio do doutorado                                                    0.5922731
+## IGC (Contínuo)                                                                 0.4827892
+## IGC (Faixa)                                                                    0.4391130
+##                                               Conceito Médio de Mestrado
+## Nº de Cursos com CPC no triênio                                0.5139914
+## Alfa (Proporção de Graduação)                                 -0.6291543
+## Conceito Médio de Graduação                                    0.3264436
+## Beta (Proporção de Mestrado - Equivalente)                     0.6325637
+## Conceito Médio de Mestrado                                     1.0000000
+## Gama (Proporção de Doutorandos – Equivalente)                  0.5102075
+## Conceito Médio do doutorado                                    0.7863032
+## IGC (Contínuo)                                                 0.4385876
+## IGC (Faixa)                                                    0.3907532
+##                                               Gama (Proporção de Doutorandos – Equivalente)
+## Nº de Cursos com CPC no triênio                                                   0.2966543
+## Alfa (Proporção de Graduação)                                                    -0.8872498
+## Conceito Médio de Graduação                                                       0.2588074
+## Beta (Proporção de Mestrado - Equivalente)                                        0.7175979
+## Conceito Médio de Mestrado                                                        0.5102075
+## Gama (Proporção de Doutorandos – Equivalente)                                     1.0000000
+## Conceito Médio do doutorado                                                       0.6429946
+## IGC (Contínuo)                                                                    0.4373959
+## IGC (Faixa)                                                                       0.3985810
+##                                               Conceito Médio do doutorado
+## Nº de Cursos com CPC no triênio                                 0.5488676
+## Alfa (Proporção de Graduação)                                  -0.6571712
+## Conceito Médio de Graduação                                     0.2710030
+## Beta (Proporção de Mestrado - Equivalente)                      0.5922731
+## Conceito Médio de Mestrado                                      0.7863032
+## Gama (Proporção de Doutorandos – Equivalente)                   0.6429946
+## Conceito Médio do doutorado                                     1.0000000
+## IGC (Contínuo)                                                  0.4001815
+## IGC (Faixa)                                                     0.3673795
+##                                               IGC (Contínuo) IGC (Faixa)
+## Nº de Cursos com CPC no triênio                    0.2431461   0.2066042
+## Alfa (Proporção de Graduação)                     -0.4999578  -0.4550394
+## Conceito Médio de Graduação                        0.9768458   0.8772144
+## Beta (Proporção de Mestrado - Equivalente)         0.4827892   0.4391130
+## Conceito Médio de Mestrado                         0.4385876   0.3907532
+## Gama (Proporção de Doutorandos – Equivalente)      0.4373959   0.3985810
+## Conceito Médio do doutorado                        0.4001815   0.3673795
+## IGC (Contínuo)                                     1.0000000   0.8974351
+## IGC (Faixa)                                        0.8974351   1.0000000
+\end{verbatim}
+
+PLOTAR AS CORRELAÇÕES
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggcorrplot}\NormalTok{(}\FunctionTok{cor}\NormalTok{(dados[, colunas]))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{2021_CALCULO_DO_IGC_RANKING_R_files/figure-latex/unnamed-chunk-31-1.pdf}
+
+CRIAR A FUNÇÃO PARA CRIAR O RANKING
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ranking }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(dados, coluna, parametros)\{}
+  \StringTok{"FUNÇÃO PARA CRIAR O RANKING}
+\StringTok{  ENTRA}
+\StringTok{    DATASET, COLUNA E OS PARAMETROS PARA FILTRO}
+\StringTok{  SAI}
+\StringTok{    A MEDIA, NOTA E O RANKING"}
+  
+\NormalTok{  filtro }\OtherTok{\textless{}{-}}\NormalTok{ dados[dados[, coluna] }\SpecialCharTok{\%in\%}\NormalTok{ parametros, ]}
+\NormalTok{  filtro }\OtherTok{\textless{}{-}}\NormalTok{ filtro }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{ ))}
+  
+\NormalTok{  media }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(filtro}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{IGC (Contínuo)}\StringTok{\textasciigrave{}}\NormalTok{)}
+\NormalTok{  linha }\OtherTok{\textless{}{-}} \FunctionTok{which}\NormalTok{(filtro}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Código da IES}\StringTok{\textasciigrave{}} \SpecialCharTok{==} \DecValTok{597}\NormalTok{)}
+\NormalTok{  nota }\OtherTok{\textless{}{-}}\NormalTok{ filtro[linha, }\StringTok{\textquotesingle{}IGC (Contínuo)\textquotesingle{}}\NormalTok{]}
+  
+  \FunctionTok{return}\NormalTok{(}\FunctionTok{c}\NormalTok{(media, nota, linha))}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+CRIAR O RANKING POR CATEGORIA
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{v1 }\OtherTok{\textless{}{-}} \FunctionTok{ranking}\NormalTok{(dados,}\StringTok{\textquotesingle{}Categoria Administrativa\textquotesingle{}}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Pública Federal\textquotesingle{}}\NormalTok{) )}
+\NormalTok{v2 }\OtherTok{\textless{}{-}} \FunctionTok{ranking}\NormalTok{(dados,}\StringTok{\textquotesingle{}Categoria Administrativa\textquotesingle{}}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Pública Federal\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Pública Estadual\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Pública Municipal\textquotesingle{}}\NormalTok{) )}
+\NormalTok{resultado }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\FunctionTok{rbind}\NormalTok{(v1, v2))}
+\FunctionTok{colnames}\NormalTok{(resultado) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Média\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Nota\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Posição\textquotesingle{}}\NormalTok{)}
+\FunctionTok{rownames}\NormalTok{(resultado) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Pública Federal\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Públicas\textquotesingle{}}\NormalTok{)}
+\NormalTok{resultado}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                    Média     Nota Posição
+## Pública Federal 3.277800 3.549261      30
+## Públicas        2.940034 3.549261      41
+\end{verbatim}
+
+CRIAR O RANKING POR UF E CATEGORIA ADMINISTRATIVA
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ddf }\OtherTok{=}\NormalTok{ dados[}\FunctionTok{which}\NormalTok{(dados}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Categoria Administrativa}\StringTok{\textasciigrave{}} \SpecialCharTok{==} \StringTok{\textquotesingle{}Pública Federal\textquotesingle{}}\NormalTok{),]}
+\NormalTok{v1 }\OtherTok{\textless{}{-}} \FunctionTok{ranking}\NormalTok{(ddf,}\StringTok{\textquotesingle{}Sigla da UF\textquotesingle{}}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}MG\textquotesingle{}}\NormalTok{) )}
+\NormalTok{v2 }\OtherTok{\textless{}{-}} \FunctionTok{ranking}\NormalTok{(ddf,}\StringTok{\textquotesingle{}Sigla da UF\textquotesingle{}}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}MG\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}SP\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}RJ\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}ES\textquotesingle{}}\NormalTok{) )}
+\NormalTok{v3 }\OtherTok{\textless{}{-}} \FunctionTok{ranking}\NormalTok{(ddf,}\StringTok{\textquotesingle{}Sigla da UF\textquotesingle{}}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\FunctionTok{unique}\NormalTok{(ddf}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Sigla da UF}\StringTok{\textasciigrave{}}\NormalTok{)) )}
+\NormalTok{resultado }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\FunctionTok{rbind}\NormalTok{(v1, v2, v3))}
+\FunctionTok{colnames}\NormalTok{(resultado) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Média\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Nota\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Posição\textquotesingle{}}\NormalTok{)}
+\FunctionTok{rownames}\NormalTok{(resultado) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Estadual\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Região\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Brasil\textquotesingle{}}\NormalTok{)}
+\NormalTok{resultado}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##             Média     Nota Posição
+## Estadual 3.450510 3.549261       6
+## Região   3.528051 3.549261      15
+## Brasil   3.277800 3.549261      30
+\end{verbatim}
+
+CRIAR O RANKING POR UF
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{v1 }\OtherTok{\textless{}{-}} \FunctionTok{ranking}\NormalTok{(dados,}\StringTok{\textquotesingle{}Sigla da UF\textquotesingle{}}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}MG\textquotesingle{}}\NormalTok{) )}
+\NormalTok{v2 }\OtherTok{\textless{}{-}} \FunctionTok{ranking}\NormalTok{(dados,}\StringTok{\textquotesingle{}Sigla da UF\textquotesingle{}}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}MG\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}SP\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}RJ\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}ES\textquotesingle{}}\NormalTok{) )}
+\NormalTok{v3 }\OtherTok{\textless{}{-}} \FunctionTok{ranking}\NormalTok{(dados,}\StringTok{\textquotesingle{}Sigla da UF\textquotesingle{}}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\FunctionTok{unique}\NormalTok{(dados}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Sigla da UF}\StringTok{\textasciigrave{}}\NormalTok{)) )}
+\NormalTok{resultado }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\FunctionTok{rbind}\NormalTok{(v1, v2, v3))}
+\FunctionTok{colnames}\NormalTok{(resultado) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Média\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Nota\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Posição\textquotesingle{}}\NormalTok{)}
+\FunctionTok{rownames}\NormalTok{(resultado) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Estadual\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Região\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Brasil\textquotesingle{}}\NormalTok{)}
+\NormalTok{resultado}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##             Média     Nota Posição
+## Estadual 2.614208 3.549261      10
+## Região   2.607671 3.549261      65
+## Brasil   2.576483 3.549261     112
+\end{verbatim}
+
+\end{document}

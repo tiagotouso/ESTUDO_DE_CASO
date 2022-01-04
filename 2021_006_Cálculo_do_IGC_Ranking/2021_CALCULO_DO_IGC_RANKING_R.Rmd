@@ -1,6 +1,10 @@
 ---
 title: "2021 Cálculo do IGC Ranking"
-output: html_notebook
+output:
+  pdf_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
 ---
 
 # PROBLEMA
@@ -13,7 +17,6 @@ CARREGAR OS MÓDULOS
 ```{r}
 library(readxl)
 library(dplyr)
-
 library(ggplot2)
 library(ggcorrplot)
 ```
@@ -119,11 +122,8 @@ filtro <- dados %>%
   group_by(`Sigla da UF`) %>%  
   summarise( media = mean(`IGC (Contínuo)`)) %>% 
   arrange(media)
-
-
 levels <- filtro$`Sigla da UF`
 filtro$`Sigla da UF` <- factor(filtro$`Sigla da UF`, levels=levels, ordered=TRUE)
-
 filtro
 ```
 
@@ -146,12 +146,9 @@ filtro <- dados %>%
   group_by(`Categoria Administrativa`) %>%  
   summarise( media = mean(`IGC (Contínuo)`)) %>% 
   arrange(media)
-
-
 levels <- filtro$`Categoria Administrativa`
 filtro$`Categoria Administrativa` <- factor(filtro$`Categoria Administrativa`, 
                                             levels=levels, ordered=TRUE)
-
 filtro
 ```
 
@@ -174,12 +171,9 @@ filtro <- dados %>%
   group_by(`Organização Acadêmica`) %>%  
   summarise( media = mean(`IGC (Contínuo)`)) %>% 
   arrange(media)
-
-
 levels <- filtro$`Organização Acadêmica`
 filtro$`Organização Acadêmica` <- factor(filtro$`Organização Acadêmica`, 
                                             levels=levels, ordered=TRUE)
-
 filtro
 ```
 
@@ -204,7 +198,6 @@ ggplot(dados, aes(x = `Organização Acadêmica`)) +
 
 CONVERTER AS VARIÁVEIS DE TEXTO PARA NUMÉRICO
 ```{r}
-
 colunas <- c("Nº de Cursos com CPC no triênio",            
 "Alfa (Proporção de Graduação)",                
 "Conceito Médio de Graduação",                  
@@ -214,11 +207,9 @@ colunas <- c("Nº de Cursos com CPC no triênio",
 "Conceito Médio do doutorado",                  
 "IGC (Contínuo)",                               
 "IGC (Faixa)" )
-
 for (cl in colunas){
   dados[cl] <- as.double(dados[, cl])
 }
-
 cor(dados[, colunas])
 ```
 
@@ -251,7 +242,6 @@ CRIAR O RANKING POR CATEGORIA
 ```{r paged.print=FALSE}
 v1 <- ranking(dados,'Categoria Administrativa', c('Pública Federal') )
 v2 <- ranking(dados,'Categoria Administrativa', c('Pública Federal', 'Pública Estadual', 'Pública Municipal') )
-
 resultado <- data.frame(rbind(v1, v2))
 colnames(resultado) <- c('Média', 'Nota', 'Posição')
 rownames(resultado) <- c('Pública Federal', 'Públicas')
@@ -260,13 +250,10 @@ resultado
 
 CRIAR O RANKING POR UF E CATEGORIA ADMINISTRATIVA
 ```{r paged.print=FALSE}
-
 ddf = dados[which(dados$`Categoria Administrativa` == 'Pública Federal'),]
-
 v1 <- ranking(ddf,'Sigla da UF', c('MG') )
 v2 <- ranking(ddf,'Sigla da UF', c('MG', 'SP', 'RJ', 'ES') )
 v3 <- ranking(ddf,'Sigla da UF', c(unique(ddf$`Sigla da UF`)) )
-
 resultado <- data.frame(rbind(v1, v2, v3))
 colnames(resultado) <- c('Média', 'Nota', 'Posição')
 rownames(resultado) <- c('Estadual', 'Região', 'Brasil')
@@ -278,7 +265,6 @@ CRIAR O RANKING POR UF
 v1 <- ranking(dados,'Sigla da UF', c('MG') )
 v2 <- ranking(dados,'Sigla da UF', c('MG', 'SP', 'RJ', 'ES') )
 v3 <- ranking(dados,'Sigla da UF', c(unique(dados$`Sigla da UF`)) )
-
 resultado <- data.frame(rbind(v1, v2, v3))
 colnames(resultado) <- c('Média', 'Nota', 'Posição')
 rownames(resultado) <- c('Estadual', 'Região', 'Brasil')
